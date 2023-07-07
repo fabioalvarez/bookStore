@@ -10,7 +10,7 @@ import (
 	"strconv"
 )
 
-func Home(w http.ResponseWriter, r *http.Request) {
+func Home(w http.ResponseWriter, _ *http.Request) {
 	res := []byte("Welcome to the Book Store API")
 
 	// Return response
@@ -21,7 +21,7 @@ func Home(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func GetBook(w http.ResponseWriter, r *http.Request) {
+func GetBook(w http.ResponseWriter, _ *http.Request) {
 	// Get all books
 	newBooks := models.GetAllBooks()
 

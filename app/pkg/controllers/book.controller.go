@@ -48,7 +48,7 @@ func GetBookById(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("error while parsing")
 	}
 
-	// Get book by Id
+	// Get book by ID
 	bookDetails, _ := models.GetBookById(ID)
 
 	// Transform []Book to a JSON

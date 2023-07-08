@@ -26,7 +26,7 @@ func init() {
 
 func (b *Book) CreateBook() *Book {
 	result := db.Create(&b)
-	fmt.Println("CreateBook - Row afected", result.RowsAffected)
+	fmt.Println("CreateBook - Rows affected", result.RowsAffected)
 	fmt.Println("CreateBook - Error", result.Error)
 	return b
 }

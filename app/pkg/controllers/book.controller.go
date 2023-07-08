@@ -11,6 +11,7 @@ import (
 )
 
 func Home(w http.ResponseWriter, _ *http.Request) {
+	// Response message
 	res := []byte("Welcome to the Book Store API")
 
 	// Return response

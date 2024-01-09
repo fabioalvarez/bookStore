@@ -25,6 +25,19 @@ Book Store API with GO
     ├── docker-compose.yml
     └── README.md
 
+# Start Project
+Create a .env file with the next env variables.
+DB_PORT=5432
+DB_USER=admin
+DB_PASSWORD=admin
+DB_NAME=postgres
+DB_HOST=db
+
+Then, run the next docker command:
+
+ ```
+ docker-compose up --build
+ ```
 
 ## Endpoint Calls
 > I'll show you how to make a call to an endpoint using curl.

@@ -19,3 +19,10 @@
 
 # Go workspace file
 go.work
+
+# Other files
+*.xml
+*.iml
+*.gitignore
+.DS_Store
+.gitignore

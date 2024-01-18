@@ -5,10 +5,10 @@ import (
 	"net/http"
 
 	"github.com/fabioalvarez/bookStore/internal/book/app"
-	"github.com/fabioalvarez/bookStore/internal/book/infra/db"
 	"github.com/fabioalvarez/bookStore/internal/book/infra/delivery/rest"
 	"github.com/fabioalvarez/bookStore/internal/book/infra/delivery/rest/handlers"
 	"github.com/fabioalvarez/bookStore/internal/book/infra/repository"
+	"github.com/fabioalvarez/bookStore/internal/common/db"
 	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
 )

@@ -1,4 +1,4 @@
-package utils
+package httpparser
 
 import (
 	"encoding/json"
@@ -7,7 +7,8 @@ import (
 	"net/http"
 )
 
-func ParseBody(r *http.Request, x interface{}) {
+func ParseBody[T any](r *http.Request) (T, error) {
+	var payload T
 	fmt.Println("Parsing body")
 	defer func(Body io.ReadCloser) {
 		err := Body.Close()
@@ -16,9 +17,9 @@ func ParseBody(r *http.Request, x interface{}) {
 		}
 	}(r.Body)
 
-	if err := json.NewDecoder(r.Body).Decode(&x); err != nil {
+	if err := json.NewDecoder(r.Body).Decode(&payload); err != nil {
 		fmt.Println("Error while parsing", err)
-		return
+		return payload, err
 	}
-	return
+	return payload, nil
 }
